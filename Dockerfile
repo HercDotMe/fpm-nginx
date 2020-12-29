@@ -16,5 +16,8 @@ WORKDIR /etc/nginx
 COPY entrypoint.sh ./entrypoint.sh
 RUN ["chmod", "+x", "./entrypoint.sh"]
 
+# Expose port
+EXPOSE ${SERVER_PORT}
+
 ENTRYPOINT ["./entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
