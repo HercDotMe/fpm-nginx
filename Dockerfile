@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:latest
 
 ENV SERVER_PORT=80
 ENV INDEX_FILE='index.php'
