@@ -37,8 +37,6 @@ steps:
         - "${DRONE_COMMIT_SHA:0:8}"
         - "${DRONE_TAG}"
       dockerfile: Dockerfile
-      platform:
-        - linux/amd64
-        - linux/arm64
+      platform: linux/arm64
     when:
       event: tag
