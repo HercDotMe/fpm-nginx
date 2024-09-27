@@ -17,7 +17,7 @@ steps:
       dockerfile: Dockerfile
       platforms:
         - linux/amd64
-        - linux/arm64`
+        - linux/arm64
     when:
       event:
         - push
@@ -39,6 +39,6 @@ steps:
       dockerfile: Dockerfile
       platforms:
         - linux/amd64
-        - linux/arm64`
+        - linux/arm64
     when:
       event: tag
