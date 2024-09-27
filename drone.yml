@@ -15,7 +15,7 @@ steps:
         - "dev"
         - "${DRONE_COMMIT_SHA:0:8}"
       dockerfile: Dockerfile
-      platform: linux/arm64
+      platform: linux/amd64
     when:
       event:
         - push
@@ -35,6 +35,6 @@ steps:
         - "${DRONE_COMMIT_SHA:0:8}"
         - "${DRONE_TAG}"
       dockerfile: Dockerfile
-      platform: linux/arm64
+      platform: linux/amd64
     when:
       event: tag
