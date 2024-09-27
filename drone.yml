@@ -15,9 +15,7 @@ steps:
         - "dev"
         - "${DRONE_COMMIT_SHA:0:8}"
       dockerfile: Dockerfile
-      platforms:
-        - linux/amd64
-        - linux/arm64
+      platforms: linux/arm64
     when:
       event:
         - push
