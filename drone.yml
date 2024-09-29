@@ -32,7 +32,6 @@ steps:
       tags:
         - "latest"
         - "stable"
-        - "${DRONE_COMMIT_SHA:0:8}"
         - "${DRONE_TAG}"
       dockerfile: Dockerfile
       platform: linux/amd64
