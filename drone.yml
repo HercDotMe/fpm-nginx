@@ -31,7 +31,6 @@ steps:
       repo: vladerc/fpm-nginx
       tags:
         - "latest"
-        - "stable"
         - "${DRONE_TAG}"
       dockerfile: Dockerfile
       platform: linux/amd64
