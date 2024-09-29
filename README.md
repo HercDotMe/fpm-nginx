@@ -13,3 +13,9 @@ This is the repository for the [`vladerc/fpm-nginx`](https://hub.docker.com/repo
 | DOCUMENT_ROOT | /var/www/public |
 | FPM_CONTAINER_NAME | php-fpm |
 | FPM_CONTAINER_PORT | 9000 |
+
+### Build command
+
+`docker build --platform linux/amd64,linux/arm64 . -t vladerc/fpm-nginx:latest -t vladerc/fpm-nginx:v1.0` - Replace `v1.0` with latest tag.
+
+`docker push vladerc/fpm-nginx --all-tags` - Push all local tags to remote repository.
