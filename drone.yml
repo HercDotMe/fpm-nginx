@@ -20,19 +20,3 @@ steps:
       event:
         - push
         - custom
-
-  - name: build-tag
-    image: plugins/docker
-    settings:
-      username:
-        from_secret: DOCKER_USER
-      password:
-        from_secret: DOCKER_PASS
-      repo: vladerc/fpm-nginx
-      tags:
-        - "latest"
-        - "${DRONE_TAG}"
-      dockerfile: Dockerfile
-      platform: linux/amd64
-    when:
-      event: tag
