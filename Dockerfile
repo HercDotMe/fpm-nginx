@@ -9,8 +9,15 @@ ENV DOCUMENT_ROOT='/var/www/public'
 ENV FPM_CONTAINER_NAME='php-fpm'
 ENV FPM_CONTAINER_PORT=9000
 
+# Arguments
+ARG APCU_VERSION=5.1.11
+
 # Update image packages
 RUN apt-get update -y && apt-get install -y nginx
+
+# Install APCu
+RUN pecl install apcu \
+  && docker-php-ext-enable apcu
 
 # Add Docker PHP Extensions
 RUN docker-php-ext-install pdo_mysql \
